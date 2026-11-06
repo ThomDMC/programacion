@@ -1,0 +1,23 @@
+import java.util.Scanner;
+
+public class calculadora_areas_y_perimetros {
+    static Scanner sc=new Scanner(System.in);
+    public static int menu(){
+        int opcion=0;
+        System.out.println("¿Qué desea calcular?");
+        System.out.println("1.Área");
+        System.out.println("2.Perímetro");
+        do{try {
+            System.out.println("Elige una opcion: ");
+            opcion=sc.nextInt();
+
+        } catch (Exception e) {
+            System.out.println("tu numero debe ser un entero");
+            sc.nextLine();
+            opcion = 0;
+        }
+        }while(opcion<1 || opcion>2);
+        return opcion;
+    }
+
+}
